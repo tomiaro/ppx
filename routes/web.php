@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get("/adverts","AdvertsContoller@sendAdvert"); 
+
+Route::get("/test",function () {
+    return view('advertisors.advertisors_main');
+});
+
+Route::post("/adverts","AdvertsContoller@createAdvert");

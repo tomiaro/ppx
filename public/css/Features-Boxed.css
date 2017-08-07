@@ -1,0 +1,178 @@
+.features-boxed {
+  color:#313437;
+  background-color:#f8f8f8;
+}
+
+.features-boxed p {
+  color:#7d8285;
+}
+
+.features-boxed h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  .features-boxed h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.features-boxed .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto;
+}
+
+.features-boxed .intro p {
+  margin-bottom:0;
+}
+
+.features-boxed .features {
+  padding:50px 0;
+}
+
+.features-boxed .item {
+  text-align:center;
+}
+
+.features-boxed .item .box {
+  text-align:center;
+  padding:30px;
+  background-color:#fff;
+  margin-bottom:30px;
+}
+
+.features-boxed .item .icon {
+  font-size:60px;
+  color:#369;
+  margin-top:20px;
+  margin-bottom:35px;
+}
+
+.features-boxed .item .name {
+  font-weight:bold;
+  font-size:18px;
+  margin-bottom:8px;
+  margin-top:0;
+  color:inherit;
+}
+
+.features-boxed .item .description {
+  font-size:15px;
+  margin-top:15px;
+  margin-bottom:20px;
+}
+
+.learn-more.empty-link:hover, .learn-more.empty-link:focus {
+  text-decoration:none;
+  cursor:default;
+}
+
+.top-buffer {
+  margin-top:30px;
+}
+
+.box {
+  background-color:#f8f8f8;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-bottom:30px;
+  margin-top:30px;
+  box-shadow:5px 8.7px 40px rgba(99, 117, 138, 0.3);
+  /*border-radius:7px;*/
+}
+
+.nadpis {
+  /*font-weight:900;*/
+}
+
+body {
+  background-color:#fffdfa;
+}
+
+input, button, select, textarea {
+  background-color:#fffdfa;
+  border:2px solid #158cba;
+  padding:5px;
+  border-radius:4px;
+  width:100%;
+}
+
+.label {
+  font-size:16px;
+  margin-bottom:20px;
+  padding:10px;
+  background-color:#82b46b;
+}
+
+#emal {
+  font-size:18px;
+}
+
+label {
+  font-size:18px;
+}
+
+a {
+  font-size:18px;
+}
+
+p {
+  font-size:16px;
+}
+
+a:focus, a:hover {
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.blog-nadpis {
+  color:#158cba;
+}
+
+.blog-nadpis:focus, .blog-nadpis:hover {
+  opacity:0.8;
+}
+
+.glyphicon.glyphicon-info-sign {
+  padding-left:3px;
+  font-size:0.8em;
+}
+
+.bottom-buffer {
+  padding-bottom:25px;
+}
+
+.list-inline {
+  font-size:16px;
+}
+
+.list-inline > li {
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  color:#ffffff;
+  border-radius:0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:#ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:#ffffff;
+}
+
+.navbar > .container .navbar-brand:hover, .navbar > .container-fluid .navbar-brand {
+  color:#333333;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs .open > a, .nav-tabs .open > a:hover, .nav-tabs .open > a:focus {
+  background-color:#f8f8f8;
+}
+

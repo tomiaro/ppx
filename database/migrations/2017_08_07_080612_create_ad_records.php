@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateRecordsTable extends Migration
+class CreateAdRecords extends Migration
 {
     /**
      * Run the migrations.
@@ -19,10 +19,6 @@ class CreateRecordsTable extends Migration
             $table->integer("advert_id")->unsigned(); 
             $table->timestamps();
         });
-
-
-
-        
     }
 
     /**
@@ -32,6 +28,6 @@ class CreateRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('records');
+        Schema::dropIfExists('ad_records');
     }
 }

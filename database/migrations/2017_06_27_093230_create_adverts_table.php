@@ -20,6 +20,7 @@ class CreateAdvertsTable extends Migration
             $table->integer("success_buys");
             $table->string("link");
             $table->integer("price");
+            $table->float("weight");
             $table->integer("shows");
             $table->boolean("active"); 
             $table->integer("category_id")->unsigned();
