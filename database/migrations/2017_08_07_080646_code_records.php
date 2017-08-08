@@ -25,7 +25,7 @@ class CodeRecords extends Migration
         Schema::table('codes', function ($table) {
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('size_id')->references('id')->on('sizes');
-            $table->foreign('category_id')->references('id')->on('categories');
+          
         });
         Schema::table('ad_records', function ($table) {
             $table->foreign('advert_id')->references('id')->on('adverts');
@@ -35,7 +35,7 @@ class CodeRecords extends Migration
         });
         Schema::table('adverts', function ($table) {
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('category_id')->references('id')->on('categories');
+          
             $table->foreign('size_id')->references('id')->on('sizes');
         });
         Schema::table('images', function ($table) {

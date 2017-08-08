@@ -22,3 +22,5 @@ Route::get("/test",function () {
 });
 
 Route::post("/adverts","AdvertsContoller@createAdvert");
+
+Route::get("/feed","feedDb@feedMe"); 

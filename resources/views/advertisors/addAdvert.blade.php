@@ -22,7 +22,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
-                            <input name="nameAd" style="width:100%" type="text">
+                            <input name="nameAd" style="width:100%" type="text" required="required">
                             </input>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
-                            <input name="urlAd" style="width:100%" type="text">
+                            <input name="urlAd" style="width:100%" type="text" required="required">
                             </input>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-4 col-sm-8 col-xs-12">
-                            <input name="image" style="background:none;width:100%;border:none;" type="file">
+                            <input name="image" style="background:none;width:100%;border:none;" type="file" required="required">
                             </input>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
-                            <input name="limit" style="width:100%;" type="number" value="20">
+                            <input name="limit" style="width:100%;" type="number" min="0" value="20" required="required">
                             </input>
                         </div>
                     </div>
