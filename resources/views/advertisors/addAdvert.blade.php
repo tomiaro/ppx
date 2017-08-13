@@ -22,7 +22,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
-                            <input name="nameAd" style="width:100%" type="text" required="required">
+                            <input name="nameAd" style="width:100%" type="text" value="{{old('nameAd')}}">
                             </input>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
-                            <input name="urlAd" style="width:100%" type="text" required="required">
+                            <input name="urlAd" style="width:100%" type="text" value="{{old('urlAd')}}">
                             </input>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-4 col-sm-8 col-xs-12">
-                            <input name="image" style="background:none;width:100%;border:none;" type="file" required="required">
+                            <input name="image" style="background:none;width:100%;border:none;" type="file">
                             </input>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             </label>
                         </div>
                         <div class="col-lg-5 col-md-4 col-md-offset-0 col-sm-6 col-xs-9">
-                            <input name="price" max="8" min="4" oninput="outputUpdate(value)" step="1" type="range" value="5">
+                            <input name="price" max="8" min="4" oninput="outputUpdate(value)" step="1" type="range" value="{{old('price')}}">
                             </input>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" style="margin-top:0px;">
@@ -123,7 +123,7 @@
                             </label>
                         </div>
                         <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
-                            <input name="limit" style="width:100%;" type="number" min="0" value="20" required="required">
+                            <input name="limit" style="width:100%;" type="number" min="0" value="20" value="{{old('limit')}}" >
                             </input>
                         </div>
                     </div>
@@ -134,7 +134,19 @@
                             </button>
                         </div>
                     </div>
+                    
                 </form>
+                @if ($errors->any()) 
+                    <div class="row top-buffer">
+                        <div class="col-md-12 alert alert-danger">
+                           <ul class="text-center" style="list-style-type: none;">
+                            @foreach ($errors->all() as $error)
+                               <li>{{$error}}</li>
+                            @endforeach   
+                         </ul>
+                        </div>
+                    </div>      
+             @endif 
             </div>
         </div>
     </div>

@@ -17,10 +17,10 @@ Route::get('/', function () {
 
 Route::get("/adverts","AdvertsContoller@sendAdvert"); 
 
-Route::get("/test",function () {
-    return view('advertisors.advertisors_main');
-});
+Route::post("/adverts","AdvertsContoller@store");
 
-Route::post("/adverts","AdvertsContoller@createAdvert");
+Route::post("/adverts/date","AdvertsContoller@showDate");
+
+Route::get("/test","AdvertsContoller@show");
 
 Route::get("/feed","feedDb@feedMe"); 
