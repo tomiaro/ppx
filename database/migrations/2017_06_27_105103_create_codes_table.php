@@ -15,7 +15,13 @@ class CreateCodesTable extends Migration
     {
         Schema::create('codes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string("name");
+            $table->integer("total_clicks");
+            $table->integer("shows");
+            $table->boolean("active");
             $table->string("value");
+              $table->string("url");
+              $table->integer("profit"); 
             $table->integer("size_id")->unsigned();
             $table->integer("category_id")->nullable();
             $table->integer('user_id')->unsigned();

@@ -26,20 +26,31 @@
                                                     <th>Stav <i class="glyphicon glyphicon-info-sign" title="Inzerát může být spuštěn nebo pozastaven"></i></th>
                                                     <th>Zobrazení <i class="glyphicon glyphicon-info-sign" title="Počet uživatlů, kteří viděli daný inzerát během výše definovaného časového období"></i></th>
                                                     <th>Kliknutí <i class="glyphicon glyphicon-info-sign" title="Počet uživatlů, kteří klikli na daný inzerát během výše definovaného časového období"></i></th>
+                                                 @isset($adverts)
                                                     <th>Konverze <i class="glyphicon glyphicon-info-sign" title="Počet uskutečněných konverzí &quot;splněných cílů&quot; uživateli behem výše definovaného časového období"></i></th>
                                                     <th>Investice <i class="glyphicon glyphicon-info-sign" title="Součet cen za uskutečněná kliknutí na daný inzerát za výše definované časové období"></i></th>
+                                                    @endisset
+                                                @isset($codes)
+                                                    <th>Provize <i class="glyphicon glyphicon-info-sign" title="Součet cen za uskutečněná kliknutí na daný inzerát za výše definované časové období"></i></th>
+                                                @endisset 
                                                     <th>Akce <i class="glyphicon glyphicon-info-sign" title="Inzerát může být spuštěn nebo pozastaven"></i></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach ($adverts as $advert) 
+                                         @isset($adverts)
+                                            @foreach ($adverts as $advert)
+                                        
+                                        
                                                 <tr>
+                                                   
                                                     <td>{{ $advert->name }}</td>
                                                     <td>{{ $advert->active}}</td>
                                                     <td>{{ $advert->shows}}</td>
                                                     <td>{{ $advert->total_clicks}}</td>
                                                     <td>{{ $advert->success_buys}}</td>
                                                     <td>{{ $advert->price}}</td>
+                                               
+                                                
                                                     <td class="dropdown-no-margin">
                                                         <div class="dropdown">
                                                             <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="padding:2px;">Výběr <span class="caret"></span></button>
@@ -50,7 +61,34 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+                                         
                                             @endforeach
+                                            @endisset
+                                     @isset($codes)
+                                         @foreach ($codes as $code)
+                                          <td>{{ $code->name }}</td>
+                                                    <td>{{ $code->active}}</td>
+                                                    <td>{{ $code->shows}}</td>
+                                                    <td>{{ $code->total_clicks}}</td>
+                                                    <td>{{ $code->profit}}</td>
+                                                
+                                                    <td class="dropdown-no-margin">
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="padding:2px;">Výběr <span class="caret"></span></button>
+                                                            <ul class="dropdown-menu drop-left" role="menu">
+                                                                <li role="presentation" class="drop-down-menu-item"><a href="#">Pozastavit </a></li>
+                                                                <li role="presentation"><a href="#">Upravit </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                         
+                                            @endforeach
+                                         @endisset
+
+
+
+
                                             </tbody>
                                         </table>
                                     </div>

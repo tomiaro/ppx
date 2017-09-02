@@ -19,8 +19,12 @@ Route::get("/adverts","AdvertsContoller@sendAdvert");
 
 Route::post("/adverts","AdvertsContoller@store");
 
+Route::post("/codes","CodesController@store");
+
 Route::post("/adverts/date","AdvertsContoller@showDate");
 
 Route::get("/test","AdvertsContoller@show");
 
 Route::get("/feed","feedDb@feedMe"); 
+
+Route::get("/testp","CodesController@show");
