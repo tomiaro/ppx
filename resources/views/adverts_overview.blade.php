@@ -68,6 +68,7 @@
                                          @foreach ($codes as $code)
                                           <td>{{ $code->name }}</td>
                                                     <td>{{ $code->active}}</td>
+                                                    
                                                     <td>{{ $code->shows}}</td>
                                                     <td>{{ $code->total_clicks}}</td>
                                                     <td>{{ $code->profit}}</td>

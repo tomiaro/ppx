@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CodeRecords extends Migration
+class CodeRecordsClicks extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CodeRecords extends Migration
      */
     public function up()
     {
-        Schema::create('code_records', function (Blueprint $table) {
+        Schema::create('code_records_clicks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("price"); 
             $table->integer("code_id")->unsigned(); 
             $table->timestamps();
+
         });
 
 
-
-        Schema::table('codes', function ($table) {
+    Schema::table('codes', function ($table) {
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('size_id')->references('id')->on('sizes');
           
@@ -30,7 +29,11 @@ class CodeRecords extends Migration
         Schema::table('ad_records', function ($table) {
             $table->foreign('advert_id')->references('id')->on('adverts');
         });
-        Schema::table('code_records', function ($table) {
+        Schema::table('code_records_shows', function ($table) {
+            $table->foreign('code_id')->references('id')->on('codes');
+        });
+
+        Schema::table('code_records_clicks', function ($table) {
             $table->foreign('code_id')->references('id')->on('codes');
         });
         Schema::table('adverts', function ($table) {
@@ -41,6 +44,8 @@ class CodeRecords extends Migration
         Schema::table('images', function ($table) {
             $table->foreign('advert_id')->references('id')->on('adverts');
         });
+
+
     }
 
     /**
@@ -50,6 +55,6 @@ class CodeRecords extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('code_records');
+          Schema::dropIfExists('code_records_clicks');
     }
 }

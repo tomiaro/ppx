@@ -28,3 +28,5 @@ Route::get("/test","AdvertsContoller@show");
 Route::get("/feed","feedDb@feedMe"); 
 
 Route::get("/testp","CodesController@show");
+
+Route::post("/testpd","CodesController@showByDate");

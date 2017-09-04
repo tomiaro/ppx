@@ -18,7 +18,7 @@ class CreateImagesTable extends Migration
             $table->string("link");
             $table->integer("advert_id")->unsigned(); 
             $table->string("format");
-            $table->timestamps();
+           
         });
     }
 
